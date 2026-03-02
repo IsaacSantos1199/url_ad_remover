@@ -9,25 +9,22 @@
     </head>
 <body>
     <div class="container">
-        <h1>LinkClean 🚀</h1>
+        <h1>LinkClean</h1>
         <p class="subtitle">Remove tracking links instantly. Paste any link, and we'll clean it for you. No links are stored.</p>
 
-        <!-- Form -->
         <form method="POST">
             <input type="url" name="original_url" placeholder="Paste your link here..." required>
             <button type="submit">Clean URL</button>
         </form>
-
-        <!-- Result -->
+        
         {% if cleaned_url %}
         <div class="result">
-            <p>✅ Your link has been cleaned!</p>
+            <p>Your link has been cleaned!</p>
             <input type="text" value="{{ cleaned_url }}" id="cleaned-link" readonly>
             <button type="button" onclick="copyLink()">Copy</button>
         </div>
         {% endif %}
 
-        <!-- Info Box -->
         <div class="info-box">
             <h3>How it works</h3>
             <ul>
@@ -38,7 +35,6 @@
             </ul>
         </div>
 
-        <!-- Example -->
         <div class="example">
             <p><strong>Example:</strong></p>
             <p>Input: <code>https://example.com/page?utm_source=abc&id=123</code></p>
@@ -61,4 +57,5 @@
         }
     </script>
 </body>
+
 </html>
